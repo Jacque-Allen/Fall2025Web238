@@ -10,22 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-//learn more sessions button
-document.addEventListener("DOMContentLoaded", function() { //run after html loaded
-  const learnMoreBtns = document.querySelectorAll(".learn-more"); //select all elements of learn more
-
-  learnMoreBtns.forEach(function(btn) {        //loop through ea button
-  btn.addEventListener("click", function() {  //click event listener to button
-  const content = this.nextElementSibling;   //expandable-  next direct element following learn more button- get next sibling element after this button 
-  if (content.style.display === "block") {  //check if visible content
-  content.style.display = "none";          //if visible, hide it
-  } else {
-  content.style.display = "block";        //if hidden, show content
-}
-});
-});
-});
-
   //jquery lab 2//
 
 //fade in text welcome hero section//
