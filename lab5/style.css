@@ -1,0 +1,808 @@
+:root 
+{
+  --mist-lavender: #dcd6e8;  /* may adjust theme from lavenders to blues */
+  --haze-blue-dark: #b0bbd9;     
+  --cloud-gray: #f3f3f6;     
+  --stone-gray: #6d6a75;     
+  --mauve-accent: #a8a2c6;   
+}
+
+
+body 
+{
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--cloud-gray);
+  color: var(--stone-gray);
+  text-align: center;
+}
+
+
+/*----nav----*/
+nav 
+{
+  background: var(--mist-lavender);
+  padding: 1.5rem;
+  position: relative; 
+  z-index: 1000;   
+}
+nav ul 
+{
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 3rem;
+}
+nav a 
+{
+text-decoration: none;
+color: var(--stone-gray);
+font-weight: bold;
+}
+nav a:hover 
+{
+color: var(--mauve-accent);
+}
+.hamburger 
+{
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.fixed 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+}
+
+
+/*---- hero home---- */
+.hero 
+{
+position: relative;
+height: 55vh;
+background: url(imgs/rainbow.jpg) no-repeat center center;
+box-shadow: 10px 6px 10px #a8a2c6; 
+background-size: cover;   
+background-color: var(--mist-lavender);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #f3f3f6;
+overflow: hidden;
+}
+.hero::after 
+{
+content: "";
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: #6c6c7c26; 
+}
+.hero-content 
+{
+position: relative;
+z-index: 1;
+}
+.hero h1 
+{
+font-size: 4rem;
+margin-bottom: 0.5rem;
+text-shadow: 0 0 8px #ffffffcc;
+}
+.hero h2 
+{
+font-size: 2rem;
+font-weight: bolder;
+text-shadow: 0 0 10px #a8a2c680;
+margin: 0;
+}
+.hero p 
+{
+font-size: 2rem;
+font-weight: bolder;
+text-shadow: 0 0 10px #a8a2c680;
+}
+
+
+/*----welcome----*/
+.welcome 
+{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+padding: 2rem;
+}
+.welcome div 
+{
+flex: 1;
+}
+.welcome img 
+{
+max-width: 80%;
+border-radius: 10px;
+box-shadow: 0 0 40px #a8a2c6;
+}
+
+
+/*----what offered----*/
+.offer 
+{
+display: flex;
+justify-content: center;
+padding: 3rem 1rem;
+}
+.offer-box 
+{
+background: var(--mist-lavender);
+max-width: 800px;
+padding: 2rem;
+border-radius: 14px;
+box-shadow: 0 6px 18px #0000001a;
+text-align: center;
+}
+.offer-box h2 
+{
+font-size: 2rem;
+margin-bottom: 1rem;
+color: var(--stone-gray);
+}
+.offer-box p 
+{
+font-size: 1.1rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+.offer-box button 
+{
+margin-top: 1rem;
+padding: 0.75rem 1.5rem;
+border: none;
+background: var(--haze-blue-dark);
+color: white;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1rem;
+box-shadow: 0 4px 12px #0000001a;
+transition: background 0.3s ease, transform 0.2s ease;
+}
+.offer-box button:hover 
+{
+background: var(--mauve-accent);
+transform: translateY(-2px);
+}
+
+
+/*----about----*/  
+.about 
+{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 3rem 2rem;
+gap: 2rem;
+max-width: 1200px;
+margin: 0 auto; 
+box-shadow: none;         
+border: none;             
+}
+.about-container 
+{
+display: flex;
+align-items: center;
+gap: 2rem;
+max-width: 1100px;
+margin: 3rem auto;
+padding: 2rem 0;
+border: none;
+box-shadow: none;
+position: relative;
+}
+.about-container::after 
+{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 40px;
+background: linear-gradient(to bottom, transparent, var(--cloud-gray));
+pointer-events: none; 
+}
+.about-image 
+{
+flex: 1.5;
+}
+.about-image img 
+{
+max-width: 80%;
+border-radius: 5px;
+box-shadow: 0 6px 8px #a8a2c6; 
+}
+.about-text 
+{
+flex: 2;
+text-align: left;
+}
+.about-text h2 
+{
+margin-bottom: 1rem;
+color: var(--stone-gray);
+font-size: 2rem;
+}
+.about-text p 
+{
+margin-bottom: 1rem;
+line-height: 1.6;
+}
+
+
+/*----mission---*/
+.mission 
+{
+background: white;              
+padding: 3rem 2rem;
+max-width: 800px;
+margin: 3rem auto;              
+border-radius: 14px;            
+box-shadow: 0 6px 18px #a8a2c6; 
+text-align: center;
+}
+.mission h2 
+{
+margin-bottom: 1rem;
+color: var(--stone-gray);
+font-size: 2rem;
+font-weight: bold;
+}
+.mission p 
+{
+font-size: 1.2rem;
+color: var(--stone-gray);
+line-height: 1.7;
+}
+
+
+/*--giving back---*/
+.giving-back 
+{
+background: white;
+padding: 3rem 2rem;
+max-width: 800px;
+margin: 3rem auto;
+border-radius: 14px;
+box-shadow: 0 6px 18px #a8a2c6;
+text-align: center;
+}
+.giving-back h2 
+{
+margin-bottom: 1rem;
+color: var(--stone-gray);
+font-size: 2rem;
+}
+.giving-back p 
+{
+margin-bottom: 1.5rem;
+color: var(--stone-gray);
+font-size: 1.1rem;
+line-height: 1.6;
+}
+.giving-back a 
+{
+color: var(--mauve-accent);
+font-weight: bold;
+text-decoration: underline;
+}
+
+/* --- slideshow --- */
+#photos {
+  border: 1px solid #bebebe;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  margin: 1.5rem auto; 
+  box-shadow: 0 4px 12px #a8a2c6;
+  border-radius: 10px;
+}
+#photos ul 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 2100px; /* 7 imgs * 300px */
+}
+#photos li {
+  float: left;
+}
+#photos img 
+{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#photos .trigger 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 300px;
+  width: 300px;
+  display: block;
+}
+.giving-back button 
+{
+padding: 0.85rem 1.8rem;
+background: var(--haze-blue-dark);
+border: none;
+border-radius: 8px;
+color: white;
+font-size: 1rem;
+cursor: pointer;
+box-shadow: 0 4px 12px #0000001a;
+transition: transform 0.2s ease;
+}
+.giving-back button:hover 
+{
+background: var(--mauve-accent);
+transform: translateY(-2px);
+}
+
+
+/*----cta----*/
+.cta 
+{
+margin: 2rem 0;
+}
+.cta button 
+{
+padding: 1rem 2rem;
+background: var(--haze-blue-dark);
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 1.2rem;
+cursor: pointer;
+}
+.cta button:hover 
+{
+background: var(--mauve-accent);
+}
+
+
+/*----complimentary cta--*/
+.community-note 
+{
+margin-top: 1rem;
+font-size: 0.95rem;
+color: var(--stone-gray);
+font-style: italic;
+}
+.contact-btn 
+{
+margin-top: 1rem;
+background-color: var(--mist-lavender);
+color: var(--stone-gray);
+border: 1px solid var(--stone-gray);
+}
+.contact-btn:hover 
+{
+background-color: var(--mauve-accent);
+color: white;
+}
+.highlight 
+{
+background-color: #d5e3db; 
+transition: background-color 0.3s ease;
+}
+
+
+/*--sessions page--*/
+.services 
+{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+/*--session boxes--*/
+.session 
+{
+  background: var(--mist-lavender);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px #6d6a75;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+.session:hover 
+{
+  transform: translateY(-3px);
+}
+.session h3 
+{
+  margin-bottom: 5px;
+  color: var(--stone-gray);
+}
+.session h4 
+{
+  font-weight: normal;
+  color: var(--stone-gray);
+  margin-bottom: 15px;
+}
+.session-content 
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.session-content img 
+{
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0000001a;
+}
+.session-info 
+{
+  flex: 1;
+}
+/*--learn more button--*/
+.learn-more 
+{
+  margin-top: 12px;
+  padding: 0.75rem 1.5rem;
+  background: var(--haze-blue-dark);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px #a8a2c6;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.learn-more:hover 
+{
+  background: var(--mauve-accent);
+  transform: translateY(-2px);
+}
+.expandable
+{
+  display: none;
+  margin-top: 10px;
+  padding: 12px;
+  background: var(--cloud-gray);
+  border-radius: 10px;
+  box-shadow: inset 0 2px 6px #6d6a75;
+}
+/*--Certification coming soon box--*/
+.certification-box 
+{
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 650px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px #a8a2c6;
+  text-align: center;
+}
+
+/*what to expect section*/
+
+
+
+/*What is Reiki page*/
+/*Intro quote*/
+.quote 
+{
+  position: relative;
+  height: 45vh;  
+  background: url("imgs/beach.jpg") no-repeat center 33%; 
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 22px #a8a2c6;
+  border-radius: 0 0 10px 10px;
+}
+.quote::after/* created overlay-may remove*/ 
+{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #a8a2c64d;  
+  z-index: 0;
+}
+.quote-content 
+{
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 1rem;
+}
+.quote h1 
+{
+  font-size: 4rem;
+  margin-bottom: .5rem;
+  text-shadow: 0 5px 20px #00000086;
+  color: #f3f3f6;
+}
+.quote h2 
+{
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #f3f3f6;
+  text-shadow: 0 1px 10px #00000086;
+  font-style: italic;
+}
+/* Reiki Intro Section */
+.reiki 
+{
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  line-height: 1.8;
+  color: var(--stone-gray);
+  background: linear-gradient(to bottom, #f3f3f6 0%, #ffffff 100%); /* soft clean gradient */
+  border-radius: 110px;
+  box-shadow: 0 4px 14px #a8a2c680;
+}
+.reiki::before 
+{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--haze-blue-dark);
+  margin: 0 auto 2rem;
+  border-radius: 3px;
+  opacity: 0.5;
+}
+.reiki p 
+{
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+}
+.reiki p:last-child 
+{
+  margin-bottom: 0;
+}
+.reiki strong 
+{
+  color: var(--haze-blue-dark);
+  font-weight: 600;
+}
+/*tradition/history of reiki section*/
+.tradition 
+{
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: left;
+  line-height: 1.7;
+  color: var(--stone-gray);
+}
+.tradition p 
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.tradition p img.tradition-img 
+{
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px #a8a2c6;
+  margin-left: 5rem;
+  flex-shrink: 0; 
+}
+/* Benefits Section */
+.benefits 
+{
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+    line-height: 1.8;
+  background: linear-gradient(to bottom, #f8f9fb, #ffffff);
+  border-radius: 110px;
+  box-shadow: 0 4px 14px #00000014;
+}
+.benefits h2 
+{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--stone-gray);
+}
+.benefits p 
+{
+  font-size: 1.2rem;
+  color: var(--stone-gray);
+  margin-bottom: 2rem;
+}
+.benefits ul 
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 750px;
+}
+.benefits li 
+{
+  background: var(--mist-lavender);
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 700;
+  color: var(--stone-gray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  line-height: 1.8;
+}
+ .benefits ul li:last-child /*center the last list item in grid*/
+{
+  grid-column: 1 / -1;     
+  justify-self: center;     
+  width: 50%;               
+}
+/* Resources Accordion */
+.accordion 
+{
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px #a8a2c6;
+  text-align: left;
+}
+.accordion h2 
+{
+  text-align: center;
+  color: var(--stone-gray);
+  margin-bottom: 1.5rem;
+}
+.accordion h3 
+{
+  background: var(--mist-lavender);
+  color: var(--stone-gray);
+  padding: 1rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+.accordion h3:hover 
+{
+  background: var(--haze-blue-dark);
+  color: white;
+}
+.accordion ul 
+{
+  list-style: none;
+  padding-left: 2rem;
+  margin: 0;
+}
+.accordion li 
+{
+  margin: 0.7rem 0;
+  padding-left: 1.2rem;
+  line-height: 2;
+  font-weight: bolder;
+}
+.accordion a 
+{
+  color: var(--stone-gray);
+  text-decoration: none;
+}
+.accordion a:hover 
+{
+  color: var(--mauve-accent);
+  text-decoration: underline;
+}
+
+
+/*----footer for pages---*/
+footer 
+{
+background: var(--mist-lavender);
+padding: 1rem;
+font-size: 0.9rem;
+color: var(--stone-gray);
+}
+
+
+/*----start of mobile response--*/
+@media (max-width: 768px) 
+{
+  /*nav*/
+  nav {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  nav ul 
+  {
+    display: none;
+    flex-direction: column;
+    background: var(--mist-lavender);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #6d6a75;
+    z-index: 999;
+  }
+  nav ul.show 
+  {
+    display: flex;
+  }
+  .hamburger 
+  {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+/*--index--*/
+  body
+  {
+    padding-top: 60px;
+  }
+  .welcome 
+  {
+    flex-direction: column;
+  }
+
+/*about pg*/
+  .about-container 
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text 
+  {
+    text-align: center;
+  }
+ /*what is reiki*/
+/*tradition*/
+  .tradition p 
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tradition p img.tradition-img 
+  {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+}
