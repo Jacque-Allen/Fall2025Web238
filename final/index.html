@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web 238 Final- Holiday tracker</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body>
+  <div class="page">
+  <div id="xmasCountdown">
+       <p>
+      <span class="days">0</span>days 
+      <span class="hours">0</span>hours 
+      <span class="minutes">0</span>minutes 
+      <span class="seconds">0</span>seconds
+    </p>
+     <h2>Until Santa Comes To Town! </h2>
+  </div>
+
+  
+  <nav>
+    <div class="hamburger">&#9776;</div>
+    <ul>
+      <li><a href="#index" class="nav-link">Home</a></li>
+      <li><a href="#santatracker" class="nav-link">Where's Santa?</a></li>
+      <li><a href="#storytime" class="nav-link">Santa's Story Time</a></li>
+      <li><a href="#kitchen" class="nav-link">Holiday Recipes</a></li>
+      <li><a href="#AskElf" class="nav-link">Ask the Elves</a></li>
+    </ul>
+  </nav>
+
+<!-- Hero-->
+<section class="hero" id="hero">
+  <img src="imgs/santa-claus-retro.jpg" alt="Santa Claus">
+  <div class="hero-content">
+    <h1>Ho Ho HO!</h1>
+    <h2>Welcome to the North Pole!</h2>
+
+  </div>
+</section>
+
+<!-- Santa letter section -->
+<section id="postoffice" class="santa-letter">
+<h2 class="section-banner">North Pole Post Office</h2>
+
+<h3 class="letter-intro">Send a Letter to Santa Claus!</h3>
+<h4 class="dear-santa">Dear Santa,</h4>
+<div class="postcard">
+<textarea id="kidLetter" placeholder="Write your letter here..."></textarea>
+
+  <div class="address">
+  <img src="imgs/penguin-stamp.jpg" alt="Stamp">
+    <p>
+    Santa Claus<br>
+    122525 Reindeer Ln<br>
+    North Pole
+    </p>
+  </div>
+</div>
+
+  <div class="santa-form">
+  My name is <input type="text" id="kidName">
+  I am <input type="number" id="kidAge" min="0" max="99"> years old,
+  I am from <input type="text" id="kidLocation">
+  <br>
+    <button class="send-btn play-santa-sound" id="sendSanta">Send to Santa</button>
+  </div>
+</section>
+
+<!-- Santa Paws letter -->
+<section id="pawoffice" class="paw-letter">
+<div class="paw-title">
+  <h3 class="letter-intro">Help Your Furry Friends Write to Santa Paws!</h3>
+  <img src="imgs/panta-paws-letter.jpg" alt="Santa Paws Letter" class="paws-img">
+</div>
+<h4 class="dear-santa">Dear Santa Paws,</h4>
+  <p>I’m a 
+    <!--pet options-->
+    <select id="petType">
+      <option value="cat">Cat</option>
+      <option value="dog">Dog</option>
+      <option value="hamster">Hamster</option>
+      <option value="fish">Fish</option>
+      <option value="bird">Bird</option>
+    </select>
+  </p>
+
+  My name is <input type="text" id="petName">
+  I am <input type="number" id="petAge" min="0" max="99"> years old.
+  
+  <div class="paw-postcard">
+    <textarea id="petLetter" placeholder="meow meow meow..."></textarea>
+
+    <div class="address">
+      <img src="imgs/polar-stamp.jpg" alt="Stamp">
+      <p>
+        Santa Paws<br>
+        122525 Reindeer Ln<br>
+        North Pole
+      </p>
+    </div>
+  </div>
+
+<button class="send-btn play-santa-sound" id="sendPaws">Send to Santa Paws</button>
+
+
+<!--popup container-->
+<div id="messagePopup">Your letter has been sent to Santa!</div>
+
+<!--Naughty/nice list-->
+
+
+    <div class="nice-list ribbon-border">
+    <h2>Santa's Naughty or Nice List</h2>
+    <p>See if you are on the Naughty or Nice list this year:</p>
+
+    <label for="checkName">Name</label>
+    <input type="text" id="checkName" class="nice-input">
+
+    <button id="checkListBtn" class="nice-btn">Check the List!</button>
+  </div>
+</section>
+<!-- Naughty/nice Popup -->
+<div id="nicePopup"></div>
+
+<!--Santa img sighting gallery-->
+<section class="spotted">
+  <div class="sightings-header">
+ <h2>Santa Sightings!</h2>
+    <img src="imgs/santa-claus-classic.png" alt="Santa" class="santa-icon">
+  </div> 
+  <p>Is Santa real? Here's the proof of Santa captured on camera!</p>
+  <div id="santaGallery">
+
+    <button class="arrow left-arrow">&#10094;</button>
+
+    <img id="santaDisplay" src="imgs/santa-in-town.jpg" alt="Santa Sighting">
+
+    <button class="arrow right-arrow">&#10095;</button>
+
+  </div>
+</section>
+
+
+<!--Holiday Joke section-->
+<section class="joke-section">
+  <h2 class="joke-title">
+    <img src="imgs/elf-funny.jpg" class="elf-icon left" alt="Elf">
+    Elf Stand Up Comedy
+    <img src="imgs/elf-laugh.jpg" class="elf-icon right" alt="Elf Laughing">
+  </h2>
+    <h3>Get ready to Ho-Ho-Ho and Ha-Ha Ha, because Santa's elves have a whole toy box full of funny material!</h3>
+<div id="jokeBox">
+  <p id="jokeQuestion"></p>
+  <p id="jokeAnswer" style="display:none;"></p>
+  <button id="revealJokeBtn" class="joke-btn">Click for the Answer!</button>
+  <button id="newJokeBtn" class="joke-btn" style="margin-top:15px;">Tell Me Another Joke!</button>
+</div>
+</section>
+
+<!--footer-->
+<footer id="footer">
+  <p>© Dec 2025 Jacqueline Allen Web 238 jQuery Final</p>
+</footer>
+</div>
+
+<!-- SOUND EFFECTS -->
+<audio id="santaSound" src="sounds/christmas-whoosh_letter.mp3"></audio>
+<audio id="navSound" src="sounds/jingle-bells-nav.mp3"></audio>
+
+</body>
+</html>
