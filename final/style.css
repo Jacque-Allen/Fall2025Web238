@@ -589,7 +589,31 @@ background-position: center -40px;
   {
     display: block;
   }
-.joke-btn 
+.postcard,
+  .paw-postcard 
+  {
+    width: 95%;       
+    padding: 15px;
+  }
+  .postcard .address img,
+  .paw-postcard .address img 
+  {
+    width: 100px;      
+    height: auto;
+  }
+  .address 
+  {
+    width: 80px;
+  }
+  #sendPaws 
+  {
+    margin-bottom: 50px ; 
+  }
+  .nice-list 
+  {
+    margin-top: 20px;
+  }
+  .joke-btn 
 {
   display: block;
   margin-left: auto;
